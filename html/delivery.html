@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delivery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <style>
+    body {
+      font-family: Times New Roman, Times, serif;
+    }
+    .nav-link {
+      font-weight: 500;
+      color: #000 !important;
+    }
+
+    .nav-link:hover {
+      color: #b8860b !important; 
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+    /* Logo Color */
+    .navbar-brand {
+      color: #ffc107 !important; /* Bootstrap warning yellow */
+    }
+    /* Delivery Section Hover Effect */
+    .delivery-info i {
+      transition: transform 0.3s ease-in-out;
+    }
+    .delivery-info i:hover {
+      transform: scale(1.2);
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+  <div class="container-fluid">
+
+    <!-- Logo (Left) -->
+    <a class="navbar-brand fw-bold text-warning" href="#" style="font-size: 1.5rem;">CakeBee</a>
+
+    <!-- Nav Items (Right for large screens) -->
+    <div class="d-none d-lg-block ms-auto">
+      <ul class="navbar-nav flex-row flex-nowrap">
+
+        <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="cakebcontact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="delivery.html">Delivery</a></li>
+      </ul>
+    </div>
+
+    <!-- Scrollable nav for mobile -->
+    <div class="d-lg-none mt-2 w-100">
+      <ul class="navbar-nav flex-row flex-nowrap overflow-auto small-nav">
+        <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="cakebcontact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="delivery.html">Delivery</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- Hero Section -->
+    <section class="py-5 bg-warning text-center text-white">
+      <div class="container">
+        <h1 class="fw-bold">Welcome to CakeBee</h1>
+        <p>Freshly baked cakes, delivered to your doorstep.</p>
+        <a href="#" class="btn btn-dark">Order Now</a>
+      </div>
+    </section>
+
+    <!-- Delivery Information Section -->
+    <section class="py-5 bg-light text-center delivery-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <i class="bi bi-truck display-4 text-warning"></i>
+            <h5 class="mt-3 fw-bold">Same Day Delivery</h5>
+            <p class="text-muted">Order before 2 PM for delivery today in select cities.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-geo-alt display-4 text-warning"></i>
+            <h5 class="mt-3 fw-bold">We Deliver To</h5>
+            <p class="text-muted">Chennai, Bangalore, Coimbatore & nearby areas.</p>
+          </div>
+          <div class="col-md-4">
+            <i class="bi bi-gift display-4 text-warning"></i>
+            <h5 class="mt-3 fw-bold">Free Shipping</h5>
+            <p class="text-muted">On orders above ₹999.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p class="mb-0">© 2025 CakeBee. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

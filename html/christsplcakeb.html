@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Christmas Specials - CakeBee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <style>
+        body {
+      font-family: Times New Roman, Times, serif;
+    }
+     .nav-link {
+      font-weight: 500;
+      color: #000 !important;
+    }
+
+    .nav-link:hover {
+      color: #b8860b !important; 
+    }
+
+  </style>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+  <div class="container-fluid">
+
+    <!-- Logo (Left) -->
+    <a class="navbar-brand fw-bold text-warning" href="#" style="font-size: 1.5rem;">CakeBee</a>
+
+    <!-- Nav Items (Right for large screens) -->
+    <div class="d-none d-lg-block ms-auto">
+      <ul class="navbar-nav flex-row flex-nowrap">
+
+        <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="cart and checkout.html">Cart and Checkout</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <!-- Scrollable nav for mobile -->
+    <div class="d-lg-none mt-2 w-100">
+      <ul class="navbar-nav flex-row flex-nowrap overflow-auto small-nav">
+        <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="giftingcakeb.html">Gifting</a></li>
+       <li class="nav-item"><a class="nav-link px-2" href="cart and checkout.html">Cart and Checkout</a></li>
+       <li class="nav-item"><a class="nav-link fw-bold text-warning" href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h1 class="text-center text-danger">🎄 Christmas Specials 🎄</h1>
+  <p class="text-center text-muted">Festive cakes & treats made for the holiday season.</p>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img src="cake16.jpg" class="card-img-top" alt="Christmas Cake">
+        <div class="card-body">
+          <h5 class="card-title">Plum Cake</h5>
+          <p class="card-text">Rich, traditional plum cake baked with love.</p>
+           <button class="btn btn-warning w-100" onclick="addToCart('Plum Cake', 200)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Add more products here -->
+  </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Filter products by category
+  function filterProducts(category) {
+    document.querySelectorAll('.product').forEach(product => {
+      product.style.display =
+        category === 'all' || product.classList.contains(category)
+          ? 'block'
+          : 'none';
+    });
+  }
+
+  // Add product to cart
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name: name, price: price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${name} has been added to your cart!`);
+  }
+</script>
+</body>
+</html>

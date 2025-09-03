@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Contact Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <style>
+    body {
+      font-family: Times New Roman, Times, serif;
+    }
+     .nav-link {
+      font-weight: 500;
+      color: #000 !important;
+    }
+
+    .nav-link:hover {
+      color: #b8860b !important; 
+    }
+
+  </style>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+  <div class="container-fluid">
+
+    <!-- Logo (Left) -->
+    <a class="navbar-brand fw-bold text-warning" href="#" style="font-size: 1.5rem;">CakeBee</a>
+
+    <!-- Nav Items (Right for large screens) -->
+    <div class="d-none d-lg-block ms-auto">
+      <ul class="navbar-nav flex-row flex-nowrap">
+
+        <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="cakebcontact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="delivery.html">Delivery</a></li>
+      </ul>
+    </div>
+
+    <!-- Scrollable nav for mobile -->
+    <div class="d-lg-none mt-2 w-100">
+      <ul class="navbar-nav flex-row flex-nowrap overflow-auto small-nav">
+        <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="cakebcontact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="delivery.html">Delivery</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+      
+<div class="container mt-5">
+  <div class="card shadow-sm p-4" style="max-width: 450px; margin: auto; border-top: 5px solid #ffcc00;">
+    <h4 class="mb-3 text-center text-warning">Order Enquiry</h4>
+    <p class="text-muted text-center small">Fill out the form to contact us for orders</p>
+    
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+      </div>
+      
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="e.g. +91 98765 43210">
+      </div>
+
+      <div class="mb-3">
+        <label for="orderDetails" class="form-label">Order Details</label>
+        <textarea class="form-control" id="orderDetails" rows="3" placeholder="Cake type, quantity, delivery date..."></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-warning w-100 fw-bold">Send Order Request</button>
+    </form>
+
+    <hr>
+    <div class="text-center small text-muted">
+      📞 Call us directly: <strong>+91 98765 43210</strong>  
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

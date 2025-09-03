@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CakeBee Clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Times New Roman, Times, serif;
+    }
+
+    .hero {
+      background: url('cake11.jpg') center/cover no-repeat;
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #000 !important;
+    }
+
+    .nav-link:hover {
+      color: #b8860b !important; 
+    }
+
+    .badge {
+      font-size: 0.7rem;
+    }
+
+    .product-img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .filter-btns .btn {
+      margin: 5px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      padding: 30px 0;
+    }
+  </style>
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-2">
+  <div class="container-fluid">
+
+    <!-- Logo (Left) -->
+    <a class="navbar-brand fw-bold text-warning" href="#" style="font-size: 1.5rem;">CakeBee</a>
+
+    <!-- Nav Items (Right for large screens) -->
+    <div class="d-none d-lg-block ms-auto">
+      <ul class="navbar-nav flex-row flex-nowrap">
+         <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="cart and checkout.html">Cart and Checkout</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="login.html">Login</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Scrollable nav for mobile -->
+    <div class="d-lg-none mt-2 w-100">
+      <ul class="navbar-nav flex-row flex-nowrap overflow-auto small-nav">
+         <li class="nav-item"><a class="nav-link px-3" href="cakebeeclone.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="christsplcakeb.html">Christmas Specials</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="giftingcakeb.html">Gifting</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="cart and checkout.html">Cart and Checkout</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-warning" href="login.html">Login</a></li>
+        
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center">
+  <div>
+    <h1 class="display-4 fw-bold">Freshly Baked Happiness</h1>
+    <p class="lead">Delicious Cakes Delivered to Your Doorstep</p>
+  </div>
+</section>
+
+<!-- Filter Buttons -->
+<div class="container text-center my-4 filter-btns">
+  <button class="btn btn-outline-success" onclick="filterProducts('all')">All</button>
+  <button class="btn btn-outline-warning" onclick="filterProducts('chocolate')">Chocolate</button>
+  <button class="btn btn-outline-warning" onclick="filterProducts('fruit')">Fruit</button>
+  <button class="btn btn-outline-warning" onclick="filterProducts('vanilla')">Vanilla</button>
+  <button class="btn btn-outline-warning" onclick="filterProducts('exotic')">Exotic</button>
+</div>
+
+<!-- Products -->
+<section class="py-4">
+  <div class="container">
+    <div class="row g-4" id="product-list">
+
+      <!-- Chocolate -->
+      <div class="col-md-4 product chocolate">
+        <div class="card">
+          <img src="cake6.jpg" class="card-img-top product-img" alt="Chocolate Truffle">
+          <div class="card-body">
+            <h5 class="card-title">Chocolate Truffle</h5>
+            <p>Rich and indulgent with dark chocolate layers.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Chocolate Truffle', 250)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 product chocolate">
+        <div class="card">
+          <img src="img7.jpg" class="card-img-top product-img" alt="Belgian Chocolate Mousse">
+          <div class="card-body">
+            <h5 class="card-title">Belgian Chocolate Mousse</h5>
+            <p>Light and airy mousse with premium Belgian chocolate.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Belgian Chocolate Mousse', 300)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fruit -->
+      <div class="col-md-4 product fruit">
+        <div class="card">
+          <img src="cake13.jpg" class="card-img-top product-img" alt="Fruit Overload">
+          <div class="card-body">
+            <h5 class="card-title">Fruit Overload</h5>
+            <p>Loaded with seasonal fruits and whipped cream.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Fruit Overload', 280)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 product fruit">
+        <div class="card">
+          <img src="cake4.jpg" class="card-img-top product-img" alt="Mango Cream Cake">
+          <div class="card-body">
+            <h5 class="card-title">Mango Cream Cake</h5>
+            <p>Fresh mango pulp blended with soft sponge and cream.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Mango Cream Cake', 300)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vanilla -->
+      <div class="col-md-4 product vanilla">
+        <div class="card">
+          <img src="cake8.jpg" class="card-img-top product-img" alt="Vanilla Delight">
+          <div class="card-body">
+            <h5 class="card-title">Vanilla Delight</h5>
+            <p>Soft vanilla sponge cake with creamy frosting.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Vanilla Delight', 220)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exotic -->
+      <div class="col-md-4 product exotic">
+        <div class="card">
+          <img src="cake9.jpg" class="card-img-top product-img" alt="Classic Cherry">
+          <div class="card-body">
+            <h5 class="card-title">Classic Cherry</h5>
+            <p>Moist cherry layers with cream cheese frosting.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Classic Cherry', 350)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 product exotic">
+        <div class="card">
+          <img src="cake5.jpg" class="card-img-top product-img" alt="Lavender Lemon">
+          <div class="card-body">
+            <h5 class="card-title">Lavender Lemon</h5>
+            <p>Rich and creamy cake with a buttery crust.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Lavender Lemon', 370)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 product exotic">
+        <div class="card">
+          <img src="cake2.jpg" class="card-img-top product-img" alt="Raspberry Delight">
+          <div class="card-body">
+            <h5 class="card-title">Raspberry Delight</h5>
+            <p>Creamy cake topped with tangy raspberry sauce.</p>
+            <button class="btn btn-warning w-100" onclick="addToCart('Raspberry Delight', 330)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p class="mb-1">© 2025 CakeBee. All rights reserved.</p>
+    <a href="#" class="text-dark mx-2">Privacy Policy</a> |
+    <a href="#" class="text-dark mx-2">Refund Policy</a> |
+    <a href="#" class="text-dark mx-2">Terms & Conditions</a>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Filter products by category
+  function filterProducts(category) {
+    document.querySelectorAll('.product').forEach(product => {
+      product.style.display =
+        category === 'all' || product.classList.contains(category)
+          ? 'block'
+          : 'none';
+    });
+  }
+
+  // Add product to cart
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ name: name, price: price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${name} has been added to your cart!`);
+  }
+</script>
+
+</body>
+</html>
